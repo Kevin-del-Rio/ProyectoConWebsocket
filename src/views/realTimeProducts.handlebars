@@ -1,0 +1,38 @@
+<h1>Incorporación de Productos</h1>
+
+<form action="/realTimeProducts" id="formProducts" method="addProduct">
+    <label for="">Nombre</label><br/>
+    <input id="formTitle" type="text" name="title"><br/>
+    <label for="">Descripción</label><br/>
+    <input id="formDescription" type="text" name="description"><br/>
+    <label for="">Precio</label><br/>
+    <input id="formPrice" type="number" name="price"><br/>
+    <label for="">Stock</label><br/>
+    <input id="formStock" type="number" name="stock"><br/>
+    <label for="">Status</label><br/>
+    <input id="formStatus" type="boolean" name="status"><br/>
+    <label for="">Imágen</label><br/>
+    <input id="formImg" type="file" name="thumbnail"><br/>
+    <label for="">Categoría</label><br/>
+    <input id="formCategory" type="text" name="category"><br/>
+    <input type="submit" id="submitForm">
+</form>
+
+<h1>Lista de Productos</h1>
+<div>
+    {{#each products }}
+    <p id="id">ID: {{this.id}}</p>
+    <p id="title">Nombre: {{this.title}}</p>
+    <p id="description">Descripción: {{this.description}}</p>
+    <p id="price">Precio: {{this.price}}</p>
+    <p id="stock">Stock: {{this.stock}}</p>
+    <p id="status">Status: {{this.status}}</p>
+    <p id="category">Categoría: {{this.category}}</p>
+    <p id="code">Code: {{this.code}}</p>
+    <p>-----------------------------------------</p>
+    <p> </p>
+    {{/each}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js" > </script>

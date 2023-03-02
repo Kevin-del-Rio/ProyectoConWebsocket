@@ -1,0 +1,17 @@
+<h1>Lista de Productos</h1>
+<div>
+    {{#each products}}
+    <p id="id">ID: {{this.id}}</p>
+    <p id="title">Nombre: {{this.title}}</p>
+    <p id="description">Descripción: {{this.description}}</p>
+    <p id="price">Precio: {{this.price}}</p>
+    <p id="stock">Stock: {{this.stock}}</p>
+    <p id="status">Status: {{this.status}}</p>
+    <p id="category">Categoría: {{this.category}}</p>
+    <p id="code">Code: {{this.code}}</p>
+    <p>-----------------------------------------</p>
+    <p> </p>
+    {{/each}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
